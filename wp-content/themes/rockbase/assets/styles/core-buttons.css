@@ -1,0 +1,158 @@
+/* Button - Outline Style
+--------------------------------------------- */
+
+html .wp-block-button.is-style-outline > .wp-block-button__link {
+	border: none;
+	background-color: transparent;
+	outline: 2px solid currentColor;
+	outline-offset: -2px;
+	padding-top: 0.7rem;
+	padding-right: clamp(1.5rem, 1.75vw, 3.5rem);
+	padding-bottom: 0.6rem;
+	padding-left: clamp(1.5rem, 1.75vw, 3.5rem);
+	border-radius: 8px;
+}
+
+html .wp-block-button.is-style-outline > .wp-block-button__link:hover {
+	color: var(--wp--preset--color--background-1);
+	outline-color: var(--wp--preset--color--foreground-1);
+	background-color: var(--wp--preset--color--foreground-1);
+	text-decoration: none!important;
+}
+
+html .wp-block-button.is-style-outline > .has-text-color.wp-block-button__link:hover {
+	color: var(--wp--preset--color--background-1)!important;
+}
+
+html [class*="has-foreground-"][class*="background-color"] .is-style-outline > .wp-block-button__link.wp-element-button:hover {
+	background-color: var(--wp--preset--color--background-1);
+	color: var(--wp--preset--color--foreground-1)!important;
+	outline: 2px solid var(--wp--preset--color--background-1);
+}
+
+/* Button - Secondary Style
+--------------------------------------------- */
+
+.is-style-button-secondary .wp-element-button,
+.wp-block.is-style-button-secondary .wp-element-button {
+	color: var(--wp--preset--color--foreground-1);
+	font-size: var(--wp--preset--font-size--small);
+	background-color: var(--wp--preset--color--secondary);
+
+}
+
+.is-style-button-secondary:hover .wp-element-button,
+.wp-block.is-style-button-secondary:hover .wp-element-button {
+	background: var(--wp--preset--color--tertiary);
+	color: var(--wp--preset--color--foreground-1);
+}
+
+/* Button - Tertiary Style
+--------------------------------------------- */
+
+.is-style-button-tertiary .wp-element-button,
+.wp-block.is-style-button-tertiary .wp-element-button {
+	color: var(--wp--preset--color--foreground-1);
+	font-size: var(--wp--preset--font-size--small);
+	background-color: var(--wp--preset--color--tertiary);
+
+}
+
+.is-style-button-tertiary:hover .wp-element-button,
+.wp-block.is-style-button-tertiary:hover .wp-element-button {
+	background: var(--wp--preset--color--foreground-1);
+	color: var(--wp--preset--color--background-1);
+}
+
+
+/* Button - Foreground
+--------------------------------------------- */
+.is-style-button-foreground .wp-element-button,
+.wp-block.is-style-button-foreground .wp-element-button {
+	color: var(--wp--preset--color--background-1);
+	font-size: var(--wp--preset--font-size--small);
+	background-color: var(--wp--preset--color--foreground-1);
+
+}
+
+.is-style-button-foreground:hover .wp-element-button,
+.wp-block.is-style-button-foreground:hover .wp-element-button {
+	background: var(--wp--preset--color--background-1);
+	color: var(--wp--preset--color--foreground-1);
+}
+
+/* Button - Background
+--------------------------------------------- */
+.is-style-button-background .wp-element-button,
+.wp-block.is-style-button-background .wp-element-button {
+	color: var(--wp--preset--color--foreground-1);
+	font-size: var(--wp--preset--font-size--small);
+	background-color: var(--wp--preset--color--background-1);
+
+}
+
+.is-style-button-background:hover .wp-element-button,
+.wp-block.is-style-button-background:hover .wp-element-button {
+	background: var(--wp--preset--color--foreground-1);
+	color: var(--wp--preset--color--background-1);
+}
+
+/* Button - Text Style
+--------------------------------------------- */
+
+.wp-block-button.is-style-button-text .wp-element-button {
+	background-color: transparent;
+	text-decoration: underline;
+	color: inherit;
+}
+
+.wp-block-button.is-style-button-text:hover .wp-element-button {
+	background-color: transparent;
+	text-decoration: none;
+}
+
+/* Button - With Background Section
+--------------------------------------------- */
+
+.has-foreground-1-background-color.has-background .is-style-button a:hover,
+.has-foreground-1-background-color.has-background .wp-element-button:hover,
+.has-foreground-1-background-color.has-background .is-style-button-primary a:hover,
+.has-foreground-1-background-color.has-background .is-style-button-secondary a:hover,
+.has-foreground-1-background-color.has-background .is-style-button-tertiary a:hover {
+	background-color: var(--wp--preset--color--background-1);
+	color: var(--wp--preset--color--foreground-1);
+}
+
+.has-foreground-1-background-color.has-background .is-style-button-background a:hover {
+	background-color: var(--wp--preset--color--secondary);
+	color: var(--wp--preset--color--foreground-1);
+}
+
+.has-foreground-1-background-color.has-background  .wp-block-button.is-style-button-text .wp-element-button {
+	color: var(--wp--preset--color--background-1);
+}
+
+.has-foreground-1-background-color.has-background  .wp-block-button.is-style-button-text:hover .wp-element-button {
+	background-color: transparent;
+	text-decoration: none;
+}
+
+.has-secondary-background-color.has-background .is-style-button-background a:hover {
+	background-color: var(--wp--preset--color--foreground-1);
+	color: var(--wp--preset--color--background-1);
+}
+
+/* Style inline images when in button
+--------------------------------------------- */
+.wp-block-button img {
+	display: inline-block;
+	margin-right: 0.5em;
+	vertical-align: text-bottom;
+	line-height: 1;
+	max-width: 1.5em;
+	max-height: 1.5em;
+}
+
+/* Powered by Rockbase
+--------------------------------------------- */
+.powered-by-rockbase-button .wp-block-button__link{display:flex;align-items:center}.powered-by-rockbase-button .wp-block-button__link > *{opacity:.85;transition:all ease-in-out .2s}.powered-by-rockbase-button img{height:12px;width:12px}.powered-by-rockbase-button .wp-block-button__link:hover,.powered-by-rockbase-button .wp-block-button__link:hover img{opacity:1}.powered-by-rockbase-button .wp-block-button__link:hover img{transform:scale(1.15) rotate(-12deg)}

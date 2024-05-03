@@ -1,0 +1,139 @@
+/*
+Theme Name: Rockbase
+Theme URI: https://rockbase.co
+Author: Rockabse LLC
+Author URI: https://rockbase.co
+Description: The foundation for your next WordPress project. 
+Requires at least: 6.3
+Tested up to: 6.4
+Requires PHP: 7.3
+Version: 1.0.1
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: rockbase
+Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, translation-ready, block-styles, template-editing, wide-blocks, global-styles
+
+Rockbase WordPress Theme, (C) Rockbase.
+Rockbase is distributed under the terms of the GNU GPL.
+*/
+
+/* Defaults
+--------------------------------------------- */
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	overflow-x: hidden;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+	box-sizing: border-box;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Adjust footer */
+footer::before {
+	clear: both;
+	content: "";
+	display: block;
+}
+
+footer {
+	margin-top: 0;
+	margin-block-start: 0;
+}
+
+a,
+button,
+input:focus,
+input[type="button"],
+input[type="submit"],
+textarea:focus,
+.wp-element-button,
+.powered-by-rockbase a img {
+	transition: all 0.2s ease-in-out;
+	font-family: var(--wp--preset--font-family--primary);
+}
+
+/* Forms and Inputs */
+input,
+select,
+textarea {
+	background-color: var(--wp--preset--color--background-1);
+	border: 1px solid var(--wp--preset--color--foreground-1);
+	color: var(--wp--preset--color--foreground-1);
+	font-family: var(--wp--preset--font-family--primary);
+	font-size: var(--wp--preset--font-size--small);
+	font-weight: inherit;
+	line-height: inherit;
+	padding: 0.7rem clamp(1.5rem, 1.75vw, 3.5rem) 0.6rem clamp(1.5rem, 1.75vw, 3.5rem);
+	width: 100%;
+}
+
+input:focus,
+textarea:focus {
+	background-color: var(--wp--preset--color--background-2);
+	outline: none;
+}
+
+input[type="checkbox"],
+input[type="image"],
+input[type="radio"] {
+	width: auto;
+}
+
+input[type="button"],
+input[type="email"],
+input[type="search"],
+input[type="submit"],
+input[type="text"],
+textarea {
+	-webkit-appearance: none;
+}
+
+::placeholder {
+	color: var(--wp--preset--color--foreground-3);
+	font-size: var(--wp--preset--font-size--small);
+}
+
+
+/* Utility Classes
+--------------------------------------------- */
+.has-balance-text-wrap {text-wrap: balance!important;}
+.has-pretty-text-wrap {text-wrap: pretty!important;}
+
+.has-hide-overflow {overflow: hidden!important;}
+
+.has-highlight-underline {
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+}
+
+.has-highlight-underline:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0.1em;
+	border-radius: 8px;
+	background-color: var(--wp--preset--color--secondary);
+	z-index: -1;
+}
+
+/* Hide Mobile / Desktop */
+.hide-desktop {display: none!important;}
+.hide-mobile {display: block!important;}
+
+@media (max-width: 781px) {
+	.hide-desktop {display: block!important;}
+	.hide-mobile {display: none!important;}
+}
+
+/* Hide featured image if empty */
+.single-post-featured-image:empty {display: none;}

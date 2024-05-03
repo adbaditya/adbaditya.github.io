@@ -1,0 +1,212 @@
+ /* Default List Styles
+ --------------------------------------------- */
+
+ .entry-content ul li,
+ .entry-content ol li,
+ .wp-block-post-content ul li,
+ .wp-block-post-content ol li {
+	margin-bottom: 0.65em;
+ }
+
+.entry-content ul ul,
+.entry-content ol ul,
+.wp-block-post-content ul ul,
+.wp-block-post-content ol ul {
+	margin-top: 0.65em;
+}
+ 
+ /* Check List Styles
+ --------------------------------------------- */
+ ul.is-style-icon-check {
+	padding-left: 34px;
+ }
+
+ ul.is-style-icon-check.has-x-small-font-size {
+	padding-left: 32px;
+ }
+
+ ul.is-style-icon-check.has-small-font-size {
+	padding-left: 34px;
+ }
+
+ ul.is-style-icon-check.has-medium-font-size {
+	padding-left: 40px;
+ }
+
+ ul.is-style-icon-check.has-large-font-size {
+	padding-left: 48px;
+ }
+ 
+ ul.is-style-icon-check li {
+	list-style-type: none;
+	position: relative;
+	margin-bottom: 0.65em;
+ }
+
+ 
+
+ ul.is-style-icon-check.has-x-small-font-size li {
+	margin-bottom: 8px;
+ }
+
+ ul.is-style-icon-check li:last-of-type {
+	margin-bottom: 0;
+ }
+
+ ul.is-style-icon-check li.list-check-disabled {
+	color: var(--wp--preset--color--foreground-4);
+ }
+
+/* Add icons to list item
+ --------------------------------------------- */
+
+ .has-background ul.is-style-icon-check li::before {
+	background-color: currentColor;
+ }
+
+ /* Check icon */
+ ul.is-style-icon-check li::before {
+	content: "";
+	background-color: var(--wp--preset--color--primary);
+	display: block;
+	position: absolute;
+	mask-size: cover;
+	-webkit-mask-size: cover;
+	-webkit-mask: url('/wp-content/themes/rockbase/assets/images/icons/icon-check-circle.svg');
+    mask: url('/wp-content/themes/rockbase/assets/images/icons/icon-check-circle.svg');
+	width: 32px!important;
+	height: 32px!important;
+	transform: scale(0.5625);
+	left: -40px;
+	top: -0.15em;
+ }
+
+ /* Disabled icon */
+ ul.is-style-icon-check li.list-check-disabled::before {
+	content: "";
+	background-color: var(--wp--preset--color--foreground-4);
+	display: block;
+	position: absolute;
+	mask-size: cover;
+	-webkit-mask-size: cover;
+	-webkit-mask: url('/wp-content/themes/rockbase/assets/images/icons/icon-x-circle.svg');
+    mask: url('/wp-content/themes/rockbase/assets/images/icons/icon-x-circle.svg');
+	width: 32px!important;
+	height: 32px!important;
+	transform: scale(0.5625);
+	left: -40px;
+	top: -0.15em;
+ }
+
+ /* Adjust colors of icon
+ --------------------------------------------- */
+
+ /* Light BG Colors */
+ .has-background-1-background-color > ul.is-style-icon-check li::before,
+ .has-background-2-background-color > ul.is-style-icon-check li::before,
+ .has-background-3-background-color > ul.is-style-icon-check li::before,
+ .has-background-4-background-color > ul.is-style-icon-check li::before    {
+	background-color: var(--wp--preset--color--primary);
+}
+
+.has-background-1-background-color > ul.is-style-icon-check li.list-check-disabled::before,
+.has-background-2-background-color > ul.is-style-icon-check li.list-check-disabled::before,
+.has-background-3-background-color > ul.is-style-icon-check li.list-check-disabled::before,
+.has-background-4-background-color > ul.is-style-icon-check li.list-check-disabled::before {
+	background-color: var(--wp--preset--color--foreground-4);
+ }
+
+ .has-background-1-background-color > ul.is-style-icon-check li.list-check-disabled,
+ .has-background-2-background-color > ul.is-style-icon-check li.list-check-disabled,
+ .has-background-3-background-color > ul.is-style-icon-check li.list-check-disabled,
+ .has-background-4-background-color > ul.is-style-icon-check li.list-check-disabled {
+	color: var(--wp--preset--color--foreground-4);
+ }
+
+ /* Dark BG Colors */
+ .has-foreground-1-background-color > ul.is-style-icon-check li::before,
+ .has-foreground-2-background-color > ul.is-style-icon-check li::before,
+ .has-foreground-3-background-color > ul.is-style-icon-check li::before,
+ .has-foreground-4-background-color > ul.is-style-icon-check li::before {
+	background-color: var(--wp--preset--color--secondary);
+ }
+
+ .has-foreground-1-background-color > ul.is-style-icon-check li.list-check-disabled::before,
+ .has-foreground-2-background-color > ul.is-style-icon-check li.list-check-disabled::before,
+ .has-foreground-3-background-color > ul.is-style-icon-check li.list-check-disabled::before
+ .has-foreground-4-background-color > ul.is-style-icon-check li.list-check-disabled::before {
+	background-color: var(--wp--preset--color--background-4);
+ }
+
+ .has-foreground-1-background-color > ul.is-style-icon-check li.list-check-disabled,
+ .has-foreground-2-background-color > ul.is-style-icon-check li.list-check-disabled,
+ .has-foreground-3-background-color > ul.is-style-icon-check li.list-check-disabled,
+ .has-foreground-4-background-color > ul.is-style-icon-check li.list-check-disabled {
+	color: var(--wp--preset--color--background-4);
+ }
+
+ /* Primary, Secondary, Tertiary */
+ .has-primary-background-color > ul.is-style-icon-check li::before {
+	background-color: var(--wp--preset--color--secondary);
+ }
+
+ .has-primary-background-color > ul.is-style-icon-check li.list-check-disabled::before {
+	background-color: var(--wp--preset--color--background-4);
+	color: var(--wp--preset--color--background-4);
+ }
+
+ .has-primary-background-color > ul.is-style-icon-check li.list-check-disabled {
+	color: var(--wp--preset--color--background-4);
+ }
+
+ .has-secondary-background-color > ul.is-style-icon-check li::before {
+	background-color: var(--wp--preset--color--foreground-1);
+ }
+
+ .has-secondary-background-color > ul.is-style-icon-check li.list-check-disabled::before {
+	background-color: var(--wp--preset--color--foreground-4);
+	color: var(--wp--preset--color--foreground-4);
+ }
+
+ .has-secondary-background-color > ul.is-style-icon-check li.list-check-disabled {
+	color: var(--wp--preset--color--foreground-4);
+ }
+
+ .has-tertiary-background-color > ul.is-style-icon-check li::before {
+	background-color: var(--wp--preset--color--foreground-1);
+ }
+
+ .has-tertiary-background-color > ul.is-style-icon-check li.list-check-disabled::before {
+	background-color: var(--wp--preset--color--foreground-4);
+	color: var(--wp--preset--color--foreground-4);
+ }
+
+ .has-tertiary-background-color > ul.is-style-icon-check li.list-check-disabled {
+	color: var(--wp--preset--color--foreground-4);
+ }
+
+
+/* Scale for specific font sizes
+ --------------------------------------------- */
+ ul.is-style-icon-check.has-x-small-font-size li::before {
+	transform: scale(0.5);
+	top: -0.225em;
+	left: -32px;
+ }
+
+ ul.is-style-icon-check.has-small-font-size li::before {
+	transform: scale(0.5625);
+	left: -34px
+ }
+
+ ul.is-style-icon-check.has-medium-font-size li::before {
+	transform: scale(0.75);
+	top: 0.075em;
+	left: -40px;
+ }
+
+ ul.is-style-icon-check.has-large-font-size li::before {
+	transform: scale(1);
+	left: -48px;
+	top: 0.3em;
+ }
